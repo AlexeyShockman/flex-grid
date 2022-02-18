@@ -1,0 +1,51 @@
+include ../index/card
+
+mixin stack(name, header)
+  .stack(class=name)
+    h1=header
+    h2 card-s
+    .cards
+      +card('card-s')
+      +card('card-s')
+      +card('card-s')
+      +card('card-s')
+      +card('card-s')
+    h2 card-m
+    .cards
+      +card-big-text('card-m')
+      +card('card-m')
+      +card-big-title('card-m')
+      +card('card-m')
+    h2 card-l
+    .cards
+      +card-big-title('card-l')
+      +card('card-l')
+      +card-big-text('card-l')
+    h2 card-xl
+    .cards
+      +card('card-xl')
+      +card('card-xl')
+    h2 XL
+    h2 L-L
+    h2 M-M-M
+    h2 S-S-S-S
+    .cards
+      +card('card-xl')
+      +card('card-l')
+      +card('card-l')
+      +card('card-m')
+      +card('card-m')
+      +card('card-m')
+      +card('card-s')
+      +card('card-s')
+      +card('card-s')
+      +card('card-s')
+    h2 S-L-S
+    h2 L-S-S
+    .cards
+      +card('card-s')
+      +card('card-l')
+      +card('card-s')
+      +card('card-l')
+      +card('card-s')
+      +card('card-s')

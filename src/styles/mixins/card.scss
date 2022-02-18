@@ -1,0 +1,183 @@
+$green: #8EBA5B;
+$gray: #777777;
+$black: #000000;
+
+$flexHoverColor: red;
+$gridHoverColor: blue;
+
+$cardGap: 20px;
+$xlCardBasis: 100%;
+$lCardBasis: calc(100% / 2 - 20px * 1 / 2);
+$mCardBasis: calc(100% / 3 - 20px * 2 / 3);
+$sCardBasis: calc(100% / 4 - 20px * 3 / 4);
+
+$totalGridCol : 12;
+$xlGridCol: 12 span;
+$lGridCol: 6 span;
+$mGridCol: 4 span;
+$sGridCol: 3 span;
+
+.flex {
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 150px;
+        gap: $cardGap;
+
+        .card-xl {
+            flex-basis: $xlCardBasis;
+        }
+
+        .card-l {
+            flex-basis: $lCardBasis;
+        }
+
+        .card-m {
+            flex-basis: $mCardBasis;
+        }
+
+        .card-s {
+            flex-basis: $sCardBasis;
+        }
+
+        .card:hover {
+            box-shadow: 0px 0px 20px 5px $flexHoverColor;
+            transition-duration: 800ms;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            justify-content: space-between;
+            transition-duration: 1s;
+            background-color: white;
+            border-radius: 10px;
+            padding: 35px;
+
+            * {
+                font-family: 'Noto Sans', sans-serif;
+            }
+
+            .card-main {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .card-main-title {
+                    margin: 0;
+                    color: $black;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+
+                .card-main-text {
+                    margin: 0;
+                    color: $gray;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            a {
+                color: $green;
+                line-height: 22px;
+            }
+
+            a:after {
+                content: '';
+                margin-left: 8px;
+                height: 22px;
+                width: 22px;
+                background: url('../../img/icon.png') no-repeat;
+                position: absolute;
+                background-size: 22px;
+            }
+        }
+    }
+}
+
+.grid {
+
+    .cards {
+        padding: 10px 150px;
+        display: grid;
+        grid-template-columns: repeat($totalGridCol, 1fr);
+        column-gap: $cardGap;
+        row-gap: $cardGap;
+
+        .card-xl {
+            grid-column: $xlGridCol;
+        }
+
+        .card-l {
+            grid-column: $lGridCol;
+        }
+
+        .card-m {
+            grid-column: $mGridCol;
+        }
+
+        .card-s {
+            grid-column: $sGridCol;
+        }
+
+        .card:hover {
+            box-shadow: 0px 0px 20px 5px $gridHoverColor;
+            transition-duration: 800ms;
+        }
+
+        .card {
+            transition-duration: 1s;
+            background-color: white;
+            border-radius: 10px;
+            padding: 35px;
+            display: grid;
+            row-gap: 32px;
+            align-content: space-between;
+
+            * {
+                font-family: 'Noto Sans', sans-serif;
+            }
+
+            .card-main {
+                display: grid;
+                row-gap: 8px;
+
+                .card-main-title {
+                    margin: 0;
+                    color: $black;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+
+                .card-main-text {
+                    margin: 0;
+                    color: $gray;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            a {
+                color: $green;
+                line-height: 22px;
+            }
+
+            a:after {
+                content: '';
+                margin-left: 8px;
+                height: 22px;
+                width: 22px;
+                background: url('../../img/icon.png') no-repeat;
+                position: absolute;
+                background-size: 22px;
+            }
+        }
+    }
+}

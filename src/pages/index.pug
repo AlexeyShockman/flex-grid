@@ -1,0 +1,10 @@
+extends common/layout
+include includes/index/stack
+
+block content
+    main.main
+        .stile-switcher
+          button.flex-btn FLEX
+          button.grid-btn GRID
+        +stack("flex", "flex")
+        +stack("grid", "grid")

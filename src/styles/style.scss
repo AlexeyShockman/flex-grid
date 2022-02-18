@@ -1,0 +1,59 @@
+@import "common/global";
+
+@import "common/header";
+
+@import "common/footer";
+
+@import "mixins/card";
+
+.main{
+    background-color: #c4c4c4;
+    h1{
+        margin: 0;
+        padding: 20px;
+        color: Gold;
+        text-align: center;
+        font-family: 'Noto Sans', sans-serif;
+        text-transform: uppercase;
+        background-color: black;
+    }
+
+    h2{
+      margin: 0;
+      padding: 15px;
+      color: white;
+      text-align: center;
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    .stile-switcher{
+        position: fixed;
+        top: 80px;
+
+        button{
+            height: 70px;
+            width: 70px;
+            margin: 3px;
+            border: none;
+            border-radius: 15px;
+            font-size: 22px;
+            font-weight: 900;
+            color: white;
+            opacity: 25%;
+        }
+
+        button:hover{
+            opacity: 100%;
+            border-radius: 0px;
+            font-size: 23px;
+            transition-duration: 1200ms;
+        }
+
+        .flex-btn{
+            background-color: rgba(255, 0, 0, 1);
+        }
+        .grid-btn{
+            background-color: rgba(0, 0, 255, 1);
+        }
+    }
+}
