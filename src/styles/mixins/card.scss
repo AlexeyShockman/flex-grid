@@ -1,3 +1,5 @@
+@import "media.scss";
+
 $green: #8EBA5B;
 $gray: #777777;
 $black: #000000;
@@ -20,9 +22,11 @@ $sGridCol: 3 span;
 .flex {
 
     .cards {
+        max-width: 1200px;
+        padding: 10px;
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        padding: 10px 150px;
         gap: $cardGap;
 
         .card-xl {
@@ -30,15 +34,41 @@ $sGridCol: 3 span;
         }
 
         .card-l {
-            flex-basis: $lCardBasis;
+            @include media-tablet {
+                flex-basis: $lCardBasis;
+            }
+
+            flex-basis: $xlCardBasis;
+
         }
 
         .card-m {
-            flex-basis: $mCardBasis;
+            @include media-tablet {
+                flex-basis: $lCardBasis
+            }
+
+            @include media-tablet-horizontal{
+                flex-basis: $mCardBasis
+            }
+
+            flex-basis: $xlCardBasis;
+            ;
         }
 
         .card-s {
-            flex-basis: $sCardBasis;
+            @include media-tablet {
+                flex-basis: $lCardBasis;
+            }
+
+            @include media-tablet-horizontal{
+                flex-basis: $lCardBasis;
+            }
+
+            @include media-laptop {
+                flex-basis: $sCardBasis;
+            }
+
+            flex-basis: $xlCardBasis;
         }
 
         .card:hover {
@@ -92,7 +122,7 @@ $sGridCol: 3 span;
                 margin-left: 8px;
                 height: 22px;
                 width: 22px;
-                background: url('../../img/icon.png') no-repeat;
+                background: url('https://github.com/AlexeyShockman/flex-grid/blob/master/src/img/icon.png?raw=true') no-repeat;
                 position: absolute;
                 background-size: 22px;
             }
@@ -103,7 +133,10 @@ $sGridCol: 3 span;
 .grid {
 
     .cards {
-        padding: 10px 150px;
+        max-width: 1180px;
+        box-sizing: content-box;
+        padding: 10px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat($totalGridCol, 1fr);
         column-gap: $cardGap;
@@ -114,15 +147,39 @@ $sGridCol: 3 span;
         }
 
         .card-l {
-            grid-column: $lGridCol;
+            @include media-tablet {
+                grid-column: $lGridCol;
+            }
+
+            grid-column: $xlGridCol;
         }
 
         .card-m {
-            grid-column: $mGridCol;
+            @include media-tablet {
+                grid-column: $lGridCol;
+            }
+
+            @include media-tablet-horizontal{
+                grid-column: $mGridCol;
+            }
+
+            grid-column: $xlGridCol;
         }
 
         .card-s {
-            grid-column: $sGridCol;
+            @include media-tablet {
+                grid-column: $lGridCol;
+            }
+
+            @include media-tablet-horizontal{
+                grid-column: $lGridCol;
+            }
+
+            @include media-laptop {
+                grid-column: $sGridCol;
+            }
+
+                grid-column: $xlGridCol;
         }
 
         .card:hover {
