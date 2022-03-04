@@ -1,11 +1,7 @@
 extends common/layout
-include includes/index/stack
+include includes/index/menu
 
 block content
-    main.main
-        .stile-switcher
-          button.flex-btn FLEX
-          button.grid-btn GRID
-          button.disable.content-btn CONT
-        +stack("flex", "flex")
-        +stack("grid", "grid")
+    .indexWrapContent
+        .mainMenu
+            +menu

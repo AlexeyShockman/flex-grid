@@ -4,7 +4,7 @@
 
 @import "common/footer";
 
-@import "mixins/card";
+@import "blocks/card";
 
 @import "mixins/media";
 
@@ -29,7 +29,7 @@
       font-family: 'Noto Sans', sans-serif;
     }
 
-    .stile-switcher{
+    .style-switcher{
         position: fixed;
         top: 80px;
         display: flex;
@@ -69,6 +69,43 @@
         }
         .content-btn{
             background-color: rgb(0, 255, 13);
+        }
+    }
+}
+
+.indexWrapContent{
+    height: 100vh;
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    background-color: #1c1c1c;
+
+
+    .mainMenu{
+        display: grid;
+        border: 2px solid coral;
+        border-radius: 8px;
+
+        .menuItem{
+            margin: 6px;
+            width: 300px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            background-color: black;
+            color: gold;
+            border: 2px solid coral;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .menuItem:hover{
+            transition: transform .2s;
+            transform: scale(1.1);
+            background-color: coral;
+            color: black;
+            border: 2px solid black;
+
         }
     }
 }

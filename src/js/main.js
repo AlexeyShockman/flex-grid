@@ -10,14 +10,12 @@ $(document).ready(() => {
     const $contentBtn = document.querySelector('.content-btn')
 
     $flexBtn.addEventListener('click', function(event) {
-        console.log('flex listnr')
         $grid.style.display = 'none';
         $flex.style.display = 'block';
         changeActiveBtn(event)
     })
 
     $gridBtn.addEventListener('click', function(event) {
-        console.log('grid listnr')
         $flex.style.display = 'none';
         $grid.style.display = 'block';
         changeActiveBtn(event)
@@ -28,7 +26,7 @@ $(document).ready(() => {
     window.addEventListener('resize', changeCardContet);
 
     function changeActiveBtn(e) {
-        let $allBtns = document.querySelectorAll('.stile-switcher > button');
+        let $allBtns = document.querySelectorAll('.style-switcher > button');
         $allBtns.forEach(e => e.classList.remove('active'));
         $allBtns.forEach(e => e.classList.add('disable'));
         e.currentTarget.classList.add('active')

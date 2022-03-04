@@ -1,0 +1,11 @@
+extends common/layout
+include includes/cards/stack
+
+block content
+    main.main
+        .style-switcher
+            button.flex-btn FLEX
+            button.grid-btn GRID
+            button.disable.content-btn CONT
+        +stack("flex", "flex")
+        +stack("grid", "grid")

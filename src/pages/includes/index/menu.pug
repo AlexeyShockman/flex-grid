@@ -1,0 +1,4 @@
+mixin menu
+    - var menuItems = ['cards', 'form','cards', 'form','cards', 'form' ];
+        each item in menuItems
+            a.menuItem(href='/' + item + '.html')=item
